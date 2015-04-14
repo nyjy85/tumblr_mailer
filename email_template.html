@@ -1,0 +1,32 @@
+<html>
+<head><meta charset='utf-8'></head>
+<body>
+  <p>Hey <%= firstName %>,</p>
+  <br>
+  <p>
+  <% if (firstName === "Nora") {%>
+  	Yo biaattch update me with some gossip.  By the way, I coded this e-mail so that it specifically outputs that last line when I mention your name.  So other people get a formal, boring stiff email intro but you get the personalized one.  Hehehehe~ Smoke weeed every day.  Ok, now onto the boring email template.
+  <% } else { %>
+    How are you doing? I'm doing well. 
+    <%  } %>
+    It's been almost <%= numMonthsSinceContact %> months
+    since we last talked. I'm learning to code full-time at Fullstack Academy and enjoying 
+    my time. This is an auto-generated email I learned how to make in Fullstack Foundations so sorry if it sounds a little stiff.
+
+  </p>
+  <p>
+    I've been blogging about my experiences at Fullstack on tumblr. 
+    Check out my most recent posts from the last 7 days:
+    <ul>
+      <% for(var i=0; i<latestPosts.length; i++) {%>
+         <li><a href=<%= latestPosts[i].short_url %>> <%= latestPosts[i].title %></a>  </li>
+      <% } %>
+    </ul>
+  </p>
+
+  <p>
+    Talk soon,<br>
+    Joanne
+  </p>
+</body>
+</html>
